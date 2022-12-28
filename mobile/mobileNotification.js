@@ -6,11 +6,11 @@ Notification.requestPermission(perm=>{
 		if(typeof body != 'object')return
 		if(typeof body == 'object'){
 			navigator.serviceWorker.ready.then(reg => {
-				reg.showNotification(title)
+				reg.showNotification(title,body)
 		})
 		}else{
 		navigator.serviceWorker.ready.then(reg=>{
-			reg.showNotification(title,body)
+			reg.showNotification(title)
 		})}
 	}
 })}
