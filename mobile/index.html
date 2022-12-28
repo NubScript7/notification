@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<input class="title" type="text" placeholder="title">
+<input class="body" type="text" placeholder="body">
+<br><br>
+<button onclick="sendNotification()">Send</button>
+<script src="mobileNotification.js"></script>
+<script>
+	const title = document.querySelector('.title');
+	const body = document.querySelector('.body');
+	function sendNotification(){
+		notify(title.value, { body: body.value })
+	}
+</script>
+</body>
+</html>
