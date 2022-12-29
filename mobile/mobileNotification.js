@@ -1,5 +1,4 @@
 function notify(title,body){
-console.log(body)
 navigator.serviceWorker.register('sw.js');
 Notification.requestPermission(perm=>{
 	if(perm=='granted'){
